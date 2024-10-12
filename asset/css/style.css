@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  /* max-width: 100vw; */
+  min-height: 100vh;
+}
+/* For the main part */
+main {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+  width: 35rem;
+}
+main img {
+  width: 35rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+/* the container that contains other things */
+main .container {
+  /* padding: 3em;
+  padding-left: 6rem;
+  padding-right: 6rem; */
+  margin: 100px 100px;
+  /* padding-left: 2em; */
+}
+
+/* For the Pricing section */
+.price {
+  display: flex;
+}
+.price:first-child {
+  font-weight: 900;
+  font-size: 3rem;
+  color: hsl(158, 36%, 37%);
+}
+/* For the cart section */
+.cart {
+  background-color: hsl(158, 36%, 37%);
+  min-width: 300px;
+  min-height: 8vh;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.cart img {
+  height: 30px;
+  width: 30px;
+}
+.cart span {
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+}
+/* Attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
