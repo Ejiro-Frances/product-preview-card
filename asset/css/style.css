@@ -8,6 +8,9 @@
 html {
   font-size: 62.5%;
 }
+a {
+  text-decoration: none;
+}
 body {
   background-color: hsl(30, 38%, 92%);
   display: flex;
@@ -15,10 +18,10 @@ body {
   justify-content: center;
   align-items: center;
   padding: 2rem 1rem;
-  /* max-width: 100vw; */
   min-height: 100vh;
+  font-family: "Montserrat";
 }
-/* For the main part */
+/*  The main section for mobile view */
 main {
   background-color: hsl(0, 0%, 100%);
   display: flex;
@@ -27,51 +30,85 @@ main {
   align-items: center;
   border-radius: 1.5rem;
   width: 35rem;
+  font-family: "Montserrat";
 }
-main img {
+main .mobile-image {
   width: 35rem;
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
 }
+main .desktop-image {
+  /* display: none; */
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
 /* the container that contains other things */
 main .container {
-  /* padding: 3em;
-  padding-left: 6rem;
-  padding-right: 6rem; */
-  margin: 100px 100px;
-  /* padding-left: 2em; */
+  padding: 2rem;
+}
+main .container .perfume {
+  letter-spacing: 0.4rem;
+}
+.container p {
+  color: hsl(228, 12%, 48%);
+}
+main .container h1 {
+  font-weight: 900;
+  font-size: 3rem;
+  text-align: left;
+  padding: 0.3rem 2.2rem 1rem 0;
+  margin: 0;
+  font-family: "Fraunces";
+}
+main .container .write-up {
+  padding: 0.2rem 0 1.5rem 0;
+  line-height: 1.6;
+  font-size: 1.5rem;
+  text-align: left;
 }
 
 /* For the Pricing section */
 .price {
   display: flex;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+  font-family: "Fraunces";
 }
-.price:first-child {
+.price p:first-child {
   font-weight: 900;
   font-size: 3rem;
   color: hsl(158, 36%, 37%);
 }
+.price p:nth-child(2) {
+  text-decoration: line-through;
+  justify-content: center;
+  padding-top: 1rem;
+}
 /* For the cart section */
-.cart {
+#cart {
   background-color: hsl(158, 36%, 37%);
-  min-width: 300px;
-  min-height: 8vh;
+  min-width: 150px;
+  min-height: 0.4rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.2rem;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-.cart img {
-  height: 30px;
-  width: 30px;
+#cart:hover {
+  background-color: hsl(158, 36%, 13%);
 }
-.cart span {
+#cart img {
+  height: 16px;
+  width: 16px;
+}
+#cart span {
   color: hsl(0, 0%, 100%);
-  font-size: 2rem;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
 }
 /* Attribution */
 .attribution {
@@ -80,4 +117,53 @@ main .container {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Media Query */
+
+@media screen and (min-width: 480px) {
+  body {
+    padding: 0.2rem 1rem;
+  }
+  main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    border: 1px solid red;
+  }
+  main .mobile-image {
+    display: none;
+  }
+  main .desktop-image {
+    visibility: visible;
+    width: 30rem;
+    height: 35rem;
+    padding: 0;
+    margin: 0;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border: 1px solid blue;
+  }
+  main .mobile-image {
+    width: 0;
+    height: 0;
+  }
+
+  /* the container that contains other things */
+  main .container {
+    padding: 1.8rem 1.6rem;
+    margin: 0;
+    border: 1px solid blue;
+  }
+
+  /* For the cart section */
+  #cart {
+    min-height: 0.9rem;
+    border-radius: 0.5rem;
+    gap: 1rem;
+  }
 }
